@@ -10,12 +10,11 @@ int get_length(char text[] , int len){
   return total;
 }
 
-char *reverse(char nama[] , int len){
+char *reverse(char text[] , int len){
   char *result = (char*)malloc(sizeof(char) * len);
   for(int i=0;i<len;i++){
-    char temp=nama[i];
-    result[i] = nama[(len-1)-i];
-    result[(len-1)-i] = temp;
+    result[i] = text[(len-1)-i];
+    result[(len-1)-i] = text[i];
   }
 
   return result;
